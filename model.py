@@ -7,10 +7,10 @@ import web
 
 db = web.database(
 			dbn='mysql',
-			host=if0ck476y7axojpg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com,
-			db=d3ngn1fnbhxtvtl4,
-			user=lv1rabw9vpg2wo68,
-			pw=db_pw
+			host='if0ck476y7axojpg.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+			db='vzvh9nyml6fld1d9',
+			user='twoz5kghnry9241t',
+			pw='ifxg7id1n56pvvc2'
 			)
 
 def get_posts():
