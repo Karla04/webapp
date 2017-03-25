@@ -1,6 +1,6 @@
-CREATE DATABASE d3ngn1fnbhxtvtl4;
+#CREATE DATABASE ;
 
-USE d3ngn1fnbhxtvtl4;
+USE vzvh9nyml6fld1d9;
 
 CREATE TABLE  productos (
   id_producto int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
