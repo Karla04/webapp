@@ -2,7 +2,7 @@ import web
 import model
         
 urls = (
-    '/index', 'Index',
+    '/', 'Index',
     '/ver/(\d+)','Ver',
     '/delete/(\d+)', 'Delete',
     '/modificar/(\d+)','Modificar',
@@ -37,7 +37,7 @@ class Borrar:
 class Delete:
     def POST(self, id):
         model.delete_post(int(id))
-        raise web.seeother('/index')
+        raise web.seeother('/')
 
 class Insertar:
     form = web.form.Form(
@@ -68,7 +68,7 @@ class Insertar:
         if not form.validates():
             return render.insertar(form)
         model.new_post(form.d.producto, form.d.descripcion,form.d.existencias, form.d.precio_compra, form.d.precio_venta, imagen_producto)
-        raise web.seeother('/index')
+        raise web.seeother('/')
 
 class Modificar:
     def GET(self, id):
@@ -92,7 +92,7 @@ class Modificar:
         if not form.validates():
             return render.modificar(post, form)
         model.update_post(int(id), form.d.producto, form.d.descripcion,form.d.existencias, form.d.precio_compra, form.d.precio_venta, imagen_producto)
-        raise web.seeother('/index')
+        raise web.seeother('/')
 
 app = web.application(urls, globals())
 
