@@ -1,0 +1,19 @@
+$def with(posts)
+<h1>Productos</h1>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Productos</th>
+			<th>Modificar</th>
+			<th>Borrar</th>
+		</tr>
+	</thead>
+	<tbody>
+	$for post in posts:
+	<tr>
+		<td><a href="/ver/$post.id_producto">$post.producto</a></td>
+		<td><a href="/modificar/$post.id_producto">Modificar</a></td>
+		<td><a href="/borrar/$post.id_producto">Borrar</a></td>
+	</tr>
+	</tbody>
+</table>
